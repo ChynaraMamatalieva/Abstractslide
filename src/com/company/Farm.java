@@ -5,15 +5,15 @@ import java.util.Arrays;
 public class Farm {
     private String address;
     private String ownerName;
-    private Sheep[] sheep;
-    private Cow[] cows;
-    private Horse[] horses;
+    private DomesticAnimal[] sheep;
+    private DomesticAnimal[] cows;
+    private DomesticAnimal[] horses;
 
     public Farm(){
 
     }
 
-    public Farm(String address, String ownreName, Sheep[] sheep, Cow[] cows, Horse[] horses) {
+    public Farm(String address, String ownreName, DomesticAnimal[] sheep, DomesticAnimal[] cows, DomesticAnimal[] horses) {
         this.address = address;
         this.ownerName = ownreName;
         this.sheep = sheep;
@@ -37,38 +37,38 @@ public class Farm {
         this.ownerName = ownreName;
     }
 
-    public Sheep[] getSheep() {
+    public DomesticAnimal[] getSheep() {
         return sheep;
     }
 
-    public void setSheep(Sheep[] sheep) {
+    public void setSheep(DomesticAnimal[] sheep) {
         this.sheep = sheep;
     }
 
-    public Cow[] getCows() {
+    public DomesticAnimal[] getCows() {
         return cows;
     }
 
-    public void setCows(Cow[] cows) {
+    public void setCows(DomesticAnimal[] cows) {
         this.cows = cows;
     }
 
-    public Horse[] getHorses() {
+    public DomesticAnimal[] getHorses() {
         return horses;
     }
 
-    public void setHorses(Horse[] horses) {
+    public void setHorses(DomesticAnimal[] horses) {
         this.horses = horses;
     }
 
     @Override
     public String toString() {
         return "Farm{" +
-                "\naddress='" + address + '\'' +
-                ", \nownreName='" + ownerName + '\'' +
-                ", \nsheep=" + Arrays.toString(sheep) +
-                ", \ncows=" + Arrays.toString(cows) +
-                ", \nhorses=" + Arrays.toString(horses) +
+                "\nFarm's address:" + address + '\'' +
+                ", \nOwner's name:" + ownerName + '\'' +
+                ", \nSheep:" + Arrays.toString(sheep) +
+                ", \nCows:" + Arrays.toString(cows) +
+                ", \nHorses:" + Arrays.toString(horses) +
                 '}';
     }
 }
